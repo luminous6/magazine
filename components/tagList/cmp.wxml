@@ -1,0 +1,7 @@
+<!--标签列表-->
+
+<view class="container">
+    <slot name="before" />
+    <m-tag class="tag" wx:for="{{markList}}" wx:key="{{item.typeId || item.tagId}}" tag="{{item.type || item.tag}}" tagId="{{item.typeId}}" />
+    <slot name="after"></slot>
+</view>

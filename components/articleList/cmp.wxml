@@ -1,0 +1,14 @@
+<!--文章列表组件-->
+<view class="container">
+
+	<m-article
+	 class="article"
+	 wx:for="{{articleList}}"
+	 articleDetail="{{item}}"
+	 wx:key="{{index}}"
+	/>
+	<m-loading hidden="{{!loading}}" class="loading" />
+	<view class="nomore" wx:if="{{noMoreData}}">没有更多数据了...</view>
+
+</view>
+

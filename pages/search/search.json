@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "m-search": "/components/search/cmp",
+        "m-articleList": "/components/articleList/cmp",
+        "m-loading": "/components/loading/cmp"
+    }
+}

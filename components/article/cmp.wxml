@@ -1,0 +1,35 @@
+<!-- 文章组件 -->
+<view class="container">
+
+    <view class="mark-container">
+        <image class="avatar" src="{{articleDetail.mark.avatar}}" />
+        <text class="text">{{articleDetail.mark.people}}等{{articleDetail.mark.count }}人马克了</text>
+    </view>
+
+    <view>
+        <m-bigImg wx:if="{{articleDetail.type==0}}" mainTitle="{{articleDetail.mainTitle}}" imgSrc="{{articleDetail.imgArray[0]}}" />
+
+        <m-nineImg wx:elif="{{articleDetail.type==1}}" mainTitle="{{articleDetail.mainTitle}}" imgArr="{{articleDetail.imgArray}}" />
+
+        <m-video wx:elif="{{articleDetail.type==3}}" src="{{articleDetail.video.src}}" poster="{{articleDetail.video.poster}}" duration="{{articleDetail.video.duration}}" mainTitle="{{articleDetail.mainTitle}}" />
+
+        <m-imgText wx:elif="{{articleDetail.type==2}}" mainTitle="{{articleDetail.mainTitle}}" imgSrc="{{articleDetail.imgSrc}}" subHead="{{articleDetail.subHead}}" />
+
+        <m-pureText wx:elif="{{articleDetail.type==4}}" subHead="{{articleDetail.subHead}}" mainTitle="{{articleDetail.mainTitle}}" />
+    </view>
+    <view class="control-container">
+
+        <view>
+            <m-tag tag="{{articleDetail.tag}}" tagId="{{articleDetail.tagId}}" />
+        </view>
+
+        <view class="control-box">
+            <m-more class="box" tag="{{articleDetail.tag}}" />
+            <m-imgBtn open-type="share" class="box img-btn">
+                <image src="/images/mark/relay.png" slot="img" />
+            </m-imgBtn>
+            <m-like class="box" like='{{likeStatus}}' catch:like="onLike" />
+        </view>
+
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!--马克-->
+<view class="container">
+
+    <view class="user-container">
+        <view class="user-info">
+            <view class="user-name">{{userInfo.nickName}}</view>
+            <view class="user-avatar">
+
+                <image wx:if="{{authorized}}" src="{{userInfo.avatarUrl}}" />
+                <m-imgBtn open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+                    <image src="/images/mark/login.png" slot="img" />
+                </m-imgBtn>
+            </view>
+        </view>
+        <view class="share">
+            <!-- <image src="/images/mark/relay.png" /> -->
+            <!-- <d-imgBtn open-type="getUserInfo" /> -->
+            <m-imgBtn open-type="share">
+                <image src="/images/mark/relay.png" slot="img" />
+            </m-imgBtn>
+        </view>
+    </view>
+
+    <m-articleList articleList="{{likeList}}"></m-articleList>
+
+</view>

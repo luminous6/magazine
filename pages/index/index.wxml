@@ -1,0 +1,19 @@
+<!-- 首页 -->
+<view class="container">
+
+    <m-nav class="nav" catch:nav="onNav" />
+
+    <m-recommend class="recommend" magazineId="{{magazineId}}" recommend="{{recommendList}}" />
+
+    <m-tagList markList="{{typeList}}">
+
+        <m-add slot="before" class="add" wx:if="{{magazineId == 0}}" />
+        <view slot="after" class="to-catalog" catch:tap="onCatalog" wx:if="{{magazineId == 0}}">•••</view>
+    </m-tagList>
+
+    <m-articleList articleList="{{articleList}}" more="{{more}}" magazineId="{{magazineId}}" />
+
+    <view class="loading-container" wx:if="{{loading}}">
+        <m-loading class="loading" />
+    </view>
+</view>

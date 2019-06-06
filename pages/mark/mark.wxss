@@ -1,0 +1,42 @@
+/* pages/mark/mark.wxss */
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx 30rpx;
+    background: #fff;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50rpx;
+}
+
+.user-name {
+    font-size: 40rpx;
+}
+
+.user-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-avatar image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.share {
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 30rpx;
+    margin-bottom: 3rpx;
+}
+
+.share image {
+    width: 50rpx;
+    height: 50rpx;
+}

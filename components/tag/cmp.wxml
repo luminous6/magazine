@@ -1,0 +1,2 @@
+<!--标签组件-->
+<view class="container" catch:tap="onTap">{{tag}}</view>

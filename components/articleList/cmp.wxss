@@ -1,0 +1,24 @@
+/* components/articleList/cmp.wxss */
+
+.container {
+    padding: 20rpx;
+    background: rgba(0, 0, 0, .1)
+}
+
+.article {
+    margin-top: 20rpx;
+    display: block;
+}
+
+.nomore {
+    padding: 10rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #666666;
+    margin-top: 10rpx;
+}
+
+.loading {
+    display: block;
+    margin: 30rpx 315rpx;
+}
